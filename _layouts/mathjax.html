@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>{{site.coursename}}: {{page.title}}</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/csf.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/syntax.css">
+  <link rel="shortcut icon" href="{{site.baseurl}}/img/favicon.png">
+  <script type="text/javascript" src="{{site.baseurl}}/js/csf.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<body>
+  <div id="content">
+    <ul id="navbar">
+      <li><span class="csf">CSF@JHU</span></li>
+      <li id="navbar_home"><a href="{{site.baseurl}}/index.html">Home</a></li>
+      <li id="navbar_syllabus"><a href="{{site.baseurl}}/syllabus.html">Syllabus</a></li>
+      <li id="navbar_schedule"><a href="{{site.baseurl}}/schedule.html">Schedule</a></li>
+      <li id="navbar_assignments"><a href="{{site.baseurl}}/assignments.html">Assignments</a></li>
+      <li id="navbar_resources"><a href="{{site.baseurl}}/resources.html">Resources</a></li>
+    </ul>
+    <div style="clear: both;"></div>
+
+    <hr id="headerSep">
+
+    <div id="pageTitle">{{site.coursename}}: {{page.title}}</div>
+
+    {{content}}
+
+    <div id="footer"></div>
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        csf.pageCategory = "{{page.category}}";
+        csf.onLoad();
+      });
+    </script>
+  </div>
+</body>
+
+</html>
+
+<!--
+vim:ts=2:
+-->
