@@ -184,7 +184,67 @@ be represented.
 
 **Rotate left and right**
 
-*More information coming soon!*
+For the `uint256_rotate_left` and `uint256_rotate_right` functions, you
+will need to think of a `UInt256` value as being a sequence of 256 bits.
+
+"Rotate" operations are like shifts, in that bits are moved some number of
+positions left or right. However, in a shift, when bits are shifted out
+of a value, they disappear, and bits shifted in on the other end are
+typically 0. In a rotate operation, any bits shifted out on one end are
+shifted back in on the other end, so that no bits are lost.
+
+To understand how this works, let's consider an 8 bit value consisting
+of the following sequence of bits:
+
+```
+01111001
+```
+
+In hexadecimal, this value could be represented as
+
+```
+79
+```
+
+Rotating this value 3 bits to the left would shift out the
+three most signifiant bits (011) on the left side, and shift
+them back in on the right side, resulting in the bit string
+
+```
+11001011
+```
+
+which in hexadecimal is
+
+```
+CB
+```
+
+The original bit string rotated right by 3 positions would shift out the
+three least significant bits (001) on the right and shift them back in
+on the left side, resulting in the bit string
+
+```
+00101111
+```
+
+which in hexadecimal is
+
+```
+2F
+```
+
+These examples illustrate the basic concept of rotations: you will need to figure out how
+to implement them for `UInt256` values.
+
+The `uint256_tests.c` program contains a few basic tests demonstrating how
+the `uint256_rotate_left` and `uint256_rotate_right` functions are expected to
+work.
+
+Note that these functions will probably be the most difficult to implement of all
+of the functions in the assignment. You will probably find drawing diagrams on paper
+to be useful. Writing good unit tests will be especially important for these
+functions.
 
 **Conversion from hex**
 
