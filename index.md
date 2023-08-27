@@ -33,4 +33,5 @@ Gradescope.
 
 ## News
 
-* **Aug 28** — Welcome!
+* **Aug 28** — Welcome! [Assignment 1](assign/assign01.html) has two milestones,
+  due Wednesday, Sep 6th and Wednesday, Sep 13th, respectively.

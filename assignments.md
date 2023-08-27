@@ -34,4 +34,4 @@ Please read the [style guidelines](assign/style.html) so that you know what our 
 
 Assignment | Type | Due
 ---------- | :--: | ---
-[Assignment 1](assign/assign01.html) | Pair | MS1 due *TBD*<br>MS2 due *TBD*
+[Assignment 1](assign/assign01.html) | Pair | MS1 due Wednesday, Sep 6th<br>MS2 due Wednesday, Sep 13th
