@@ -32,6 +32,10 @@ completing the assignment.
 
 Please read the [style guidelines](assign/style.html) so that you know what our coding style expectations are.
 
+**Important**: All assignments must compile and run on x86-64 Linux.
+Please see the [Resources](resources.html) page for information on setting
+up an x86-64 Linux development environment. (There are a number of good options.)
+
 Assignment | Type | Due
 ---------- | :--: | ---
-[Assignment 1](assign/assign01.html) | Pair | MS1 due Wednesday, Sep 6th<br>MS2 due Wednesday, Sep 13th
+[Assignment 1: Big integers](assign/assign01.html) | Pair | MS1 due Wednesday, Sep 6th<br>MS2 due Wednesday, Sep 13th
