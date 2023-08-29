@@ -38,6 +38,7 @@ CAs:
 * Daniel Jin <djin4@jhu.edu>
 * Owen Reed <oreed2@jhu.edu>
 * Yash Permalla <ypermal1@jhu.edu>
+* Mac Millan <nmacmil1@jhu.edu>
 
 ## Meeting
 
