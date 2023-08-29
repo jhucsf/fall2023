@@ -33,5 +33,7 @@ Gradescope.
 
 ## News
 
+* **Aug 29** — [Assignment 1](assign/assign01.html) and its starter code have
+  been updated to fix a mistake in two function header comments.
 * **Aug 28** — Welcome! [Assignment 1](assign/assign01.html) has two milestones,
   due **Wednesday, Sep 6th** and **Wednesday, Sep 13th**, respectively.

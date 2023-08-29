@@ -9,6 +9,14 @@ Milestone 2: due Wednesday Sep 13th by 11pm
 
 Assignment type: **Pair**, you may work with one partner
 
+*Update 8/29*: The original starter code had a mistake in the function header
+comments in `uint256.c` for the `uint256_create` and `uint256_get_bits`
+functions. Where they referred to "index 3" as the index of the array
+element containing the most-significant bits of the representation,
+they should actually refer to "index 7."  The starter code has been updated,
+but if you downloaded the starter code before it was fixed, you should
+apply this change manually.
+
 # Overview
 
 In this assignment, you will implement a simple C library implementation operations
