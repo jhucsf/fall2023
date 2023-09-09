@@ -13,7 +13,7 @@ Some advice about the programming assignments:
 * Do not wait until the last minute to start: if we give you two weeks
   to complete an assignment, it's because we expect that it will take you
   two weeks (working steadily)
-* Ask questions on [Piazza](https://piazza.com/jhu/fall2022/601229) and in office hours
+* Ask questions on [Courselore](https://courselore.org) and in office hours
 * Use good programming practices
 * Test your code thoroughly (plan to spend about as much time testing the code as writing it)
 
