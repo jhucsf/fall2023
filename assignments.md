@@ -39,3 +39,4 @@ up an x86-64 Linux development environment. (There are a number of good options.
 Assignment | Type | Due
 ---------- | :--: | ---
 [Assignment 1: Big integers](assign/assign01.html) | Pair | MS1 due Wednesday, Sep 6th<br>MS2 due Wednesday, Sep 13th
+[Assignment 2: Word count](assign/assign02.html) | Pair | MS1 due Friday, Sep 25th<br>MS2 due Thursday, Oct 5th
