@@ -67,6 +67,7 @@ it
    counts for each unique word
 3. Prints a summary of number of words seen, number of unique words, and
    information about the most-frequently occurring unique word in the input
+4. Closes the input file (if not reading from standard input)
 
 Here is an example run of the `c_wordcount` program using the input file
 `little_dorrit.txt`, which is the text of [Little Dorrit by Charles Dickens](https://www.gutenberg.org/ebooks/963)
@@ -79,3 +80,6 @@ Total words read: 340410
 Unique words read: 18735
 Most frequent word: the (15723)
 </pre></div>
+
+In general, running the `asm_wordcount` program (or `casm_wordcount` program) should
+result in behavior identical to `c_wordcount`.
