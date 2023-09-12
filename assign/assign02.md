@@ -89,7 +89,7 @@ This test input is available here:
 For any test input, running the `asm_wordcount` program (or `casm_wordcount` program) should
 result in behavior identical to `c_wordcount`.
 
-## Important restriction
+## Important restrictions
 
 In implementing the functions in `c_wcfuncs.c` and `asm_wcfuncs.S`, you are not
 allowed to call C library functions other than the following ones:
@@ -98,7 +98,29 @@ allowed to call C library functions other than the following ones:
 * `malloc`
 * `free`
 
-Also, in `c_wcfuncs.c`, do not add any new `#include` directives.
+In implementing `c_wcmain.c` and `asm_wcmain.S`, you are not allowed to call C
+library functions other than the following ones:
+
+* `fopen`
+* `fclose`
+* `printf`
+* `fprintf`
+
+Do not add any additional `#include` directives in any source file.
+
+## Expectations for assembly language code
+
+For your implementations of assembly language functions, we expect the following.
+
+Your code must be *hand-written*. Using a compiler to generate assembly
+code from C code is *not* a legitimate way to complete the assembly language
+functions.
+
+We expect your assembly code to be *extensively* commented. One comment per
+assembly instruction is a good rule of thumb. One way to think about this:
+assembly code is ten times harder to write than high-level language code,
+so you should have ten times more comments in your assembly code than
+in your high-level language code.
 
 ## Functions to implement, unit tests
 
@@ -236,7 +258,51 @@ that compares as least lexicographically as the one to display when
 the summary stats are printed. You can use the `wc_str_compare` function
 to do lexicographical comparisons of strings.
 
-## Approach
+*Error handling*: if there is a command line argument specifying the
+name of an input file, but the named file can't be opened, the program
+should print an error message to `stderr` and exit with a non-zero
+exit code. If the program executes successfully, it should exit with
+exit code zero.
+
+The `Makefile` provided by the starter code has three targets to build configurations
+of the word count program:
+
+* `make c_wordcount` will build the version that uses the C function implementations
+  (in `c_wcfuncs.c`) and the C `main` function (in `c_wcmain.c`)
+* `make asm_wordcount` will build the version that uses the assembly language
+  function implementations (in `asm_wcfuncs.S`) and the assembly language
+  main function (in `asm_wcmain.S`)
+* `make casm_wordcount` will build a version that uses the assembly language function
+  implementations (in `asm_wcfuncs.S`) and the C `main` function (in `c_wcmain.c`)
+
+The `casm_wordcount` program is useful for validating that your assembly language
+function implementations work correctly when called by the main program.
+
+## Testing the main program
+
+You should create some example input files to test your main programs on.
+
+For example (user input in **bold**):
+
+<div class='highlighter-rouge'><pre>
+$ <b>curl -O https://jhucsf.github.io/fall2023/assign/oh_freddled_gruntbuggly.txt</b>
+$ <b>cat oh_freddled_gruntbuggly.txt</b>
+Oh freddled gruntbuggly,
+Thy micturations are to me,
+As plurdled gabbleblotchits,
+On a lurgid bee,
+Groop, I implore thee, my foonting turlingdromes,
+And hooptiously drangle me,
+With crinkly bindlewurdles,
+Or else I shall rend thee in the gobberwarts with my blurglecruncheon,
+See if I don't!
+$ <b>./c_wordcount oh_freddled_gruntbuggly.txt</b>
+Total words read: 45
+Unique words read: 39
+Most frequent word: i (3)
+</pre></div>
+
+## Suggested approach
 
 ### Milestone 1
 
@@ -337,7 +403,7 @@ is the right place for them.  For example:
 
 ```
         .section .rodata
-sHexDigits: .string " \t\r\f\v"
+sSpaceChars: .string " \t\r\n\f\v"
 ```
 
 The `.equ` assembler directive is useful for defining constant values,
@@ -360,8 +426,7 @@ yourself about calling conventions:
 
 The GNU assembler allows you to define "local" labels, which start
 with the prefix `.L`.  You should use these for control flow targets
-within a function.  For example (from the [echoInput.S](assign02/echoInput.S)
-example program):
+within a function.  For example:
 
 ```
 	cmpq $0, %rax                 /* see if read failed */
@@ -378,10 +443,7 @@ example program):
 codes that are either between 65 and 90 inclusive, or
 97 to 122 inclusive, are alphabetic.
 
-## Example assembly language functions
-
-This section shows implementations of a couple of assembly language functions
-you might find useful.
+## Example assembly language function
 
 Here is an assembly language function called `strLen` which returns the number
 of characters in a NUL-terminated character string:
@@ -460,6 +522,6 @@ the autograder, which executes unit tests for each required function.
 Please note the following:
 
 * If your code does not compile successfully, all of the tests will fail
-* The autograder runs `valgrind` on your code, but it does *not* report
+* The autograder runs `valgrind` on your code, but it typically does *not* report
   any information about the result of running `valgrind`: points will be
   deducted if your code has memory errors or memory leaks!
