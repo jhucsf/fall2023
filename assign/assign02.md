@@ -32,7 +32,7 @@ Milestone 1 (20%):
 * C implementations of all functions (in `c_wcfuncs.c`)
 * C implementation of the main program (in `c_wcmain.c`)
 * Assembly language implementations of the following functions
-  (in `asm_wcfuncs.S`): `wc_isspace`, `wc_isalpha`, and `wc_string_eq`
+  (in `asm_wcfuncs.S`): `wc_isspace`, `wc_isalpha`, and `wc_str_compare`
 
 Milestone 2 (80%):
 
@@ -82,8 +82,23 @@ Unique words read: 18735
 Most frequent word: the (15723)
 </pre></div>
 
-In general, running the `asm_wordcount` program (or `casm_wordcount` program) should
+This test input is available here:
+
+> [little\_dorrit.txt](little_dorrit.txt)
+
+For any test input, running the `asm_wordcount` program (or `casm_wordcount` program) should
 result in behavior identical to `c_wordcount`.
+
+## Important restriction
+
+In implementing the functions in `c_wcfuncs.c` and `asm_wcfuncs.S`, you are not
+allowed to call C library functions other than the following ones:
+
+* `fgetc`
+* `malloc`
+* `free`
+
+Also, in `c_wcfuncs.c`, do not add any new `#include` directives.
 
 ## Functions to implement, unit tests
 
@@ -147,6 +162,18 @@ make asm_wctests
 ./asm_wctests test_isspace
 ```
 
+## Unsigned characters
+
+You will notice that all of the required functions consistently use
+`unsigned char` as the data type for text characters. This is primarily
+to avoid sign-extension issues when computing a string's hash code.
+
+In the test program (`wctests.c`), there are calls to the C library
+string functions which require casts to or from `char *` or `const char *`
+to avoid compiler warnings. If you add your own test cases, you
+may need to such casts. However, no such casts should be necessary
+in `c_wcfuncs.c` or `c_wcmain.c`.
+
 ## Hash table implementation
 
 The primary data structure for keeping track of word occurrence counts
@@ -156,8 +183,9 @@ chained hashing (a.k.a. separate chaining) to handle collisions.
 Here is a brief summary of how this should work.
 
 When the word count program reads a word from the input, it
-converts it to lower case and strips off any trailing non-alphabetic
-characters. It then uses the hash function (`wc_hash`) to compute
+converts it to lower case (using `wc_tolower`) and strips off any
+trailing non-alphabetic characters (using `wc_trim_non_alpha`.)
+It then uses the hash function (`wc_hash`) to compute
 a 32 bit hash code from the word. Next, it finds the index in
 the hash table where the word should be located: this is the
 hash code mod *N*, where *N* is the number of "buckets" (array elements)
@@ -173,3 +201,265 @@ The `wc_find_or_insert` function is responsible for finding or inserting
 the `WordEntry` object for a word read from the input. It returns a
 pointer to the `WordEntry` object representing the searched-for word,
 allowing the word count program to update its occurrence count.
+
+## Main program implementation
+
+The `c_wcmain.c` and `asm_wcmain.S` source files implement (respectively)
+the C and assembly language implementations of the word count program's
+`main` function.
+
+It should be very straightforward to implement the `main` function by calling
+the functions declared in `wcfuncs.h`. For example, the main loop of the
+program should work like this:
+
+```
+while ( next word is read successfully using wc_readnext ) {
+  increase total word count by 1
+
+  use wc_tolower to convert word to lower case
+
+  use wc_trim_non_alpha to remove non-alphabetic characters at end of word
+
+  use wc_find_or_insert to find or insert the word in the hash table
+
+  increment the WordEntry's count
+}
+```
+
+In finding the unique word with the highest number of occurrences,
+you will need to traverse the entire hash table (i.e., scan through
+every `WordEntry` object in every bucket of the hash table.)
+One situation that could arise is that there could be multiple `WordEntry`
+objects that are tied for the highest occurrence count. In this case,
+choose the candidate (among the words with the highest occurrence count)
+that compares as least lexicographically as the one to display when
+the summary stats are printed. You can use the `wc_str_compare` function
+to do lexicographical comparisons of strings.
+
+## Approach
+
+### Milestone 1
+
+The main task in Milestone 1 is to implement the C versions of the
+required functions and the word count program's `main` function.
+You should implement this part of the milestone before moving on
+to implementing the assembly language functions. We recommend working on
+one function at a time, from simplest to most complicated, using
+the provided unit tests to verify their functionality. Adding your
+own unit tests is encouraged, but not required.
+
+For the three assembly language functions required for Milestone 1,
+start with the simplest ones (`wc_isspace` and `wc_isalpha`).
+Use unit tests to thoroughly test them. We *strongly* recommend
+running the unit test program in `gdb` and stepping through the
+assembly code so that you know exactly what your assembly instructions
+are doing. Experiment with viewing the contents of registers.
+When you implement `wc_str_compare` in assembly language, you
+will need to use a loop which accesses elements of the two strings
+being compared. You should experiment with using `gdb` to show you
+the contents of memory. For example, if you want to see the first
+element of the array referred-to by the first parameter (`lhs`),
+you could use the following command in `gdb`:
+
+```
+print *(unsigned char*) $rdi
+```
+
+### Milestone 2
+
+*Advice on Milestone 2 coming soon!*
+
+## Memory correctness
+
+In all C and C++ code you write, we expect that there are no memory errors,
+including
+
+* invalid reads
+* invalid writes
+* uses of uninitialized values
+* memory leaks
+
+We expect you to use the [valgrind](https://www.valgrind.org/) memory trace tool
+to check program execution for occurrences of memory errors.
+Examples of program executions which should proceed without any
+memory errors include
+
+```bash
+valgrind --leak-check=full ./c_wctests
+valgrind --leak-check=full ./asm_wctests
+valgrind --leak-check=full ./c_wordcount little_dorrit.txt
+valgrind --leak-check=full ./asm_wordcount little_dorrit.txt
+valgrind --leak-check=full ./casm_wordcount little_dorrit.txt
+```
+
+
+There should be no dynamic memory errors, and (assuming that all of
+the unit tests pass for the executions of `c_wctests` and
+`asm_wctests`) there should be no memory leaks.
+
+# Assembly language tips
+
+Here are some specific tips and tricks in no particular order.
+
+Don't forget that you need to prefix constant values with `$`.  For example,
+if you want to set register `%r10` to 16, the instruction is
+
+```
+movq $16, %r10
+```
+
+and not
+
+```
+movq 16, %r10
+```
+
+If you want to use a label as a pointer (address), prefix it with
+`$`.  For example,
+
+```
+movq $sSpaceChars, %r10
+```
+
+would put the address that `sSpaceChars` refers to in `%r10`.
+
+When calling a function, the stack pointer (`%rsp`) must contain an address
+which is a multiple of 16.  However, because the `callq` instruction
+pushes an 8 byte return address on the stack, on entry to a function,
+the stack pointer will be "off" by 8 bytes.  You can subtract 8 from
+`%rsp` when a function begins and add 8 bytes to `%rsp` before returning
+to compensate.  (See the example `addLongs` function.)  Pushing an
+odd number of callee-saved registers also works, and has the benefit
+that you can then use the callee-saved registers freely in your function.
+
+If you want to define read-only string constants, the `.rodata` section
+is the right place for them.  For example:
+
+```
+        .section .rodata
+sHexDigits: .string " \t\r\f\v"
+```
+
+The `.equ` assembler directive is useful for defining constant values,
+for example:
+
+```
+	.equ MAX_WORDLEN, 63
+```
+
+You might find the following source code comment useful for reminding
+yourself about calling conventions:
+
+```
+/*
+ * Notes:
+ * Callee-saved registers: rbx, rbp, r12-r15
+ * Subroutine arguments:  rdi, rsi, rdx, rcx, r8, r9
+ */
+```
+
+The GNU assembler allows you to define "local" labels, which start
+with the prefix `.L`.  You should use these for control flow targets
+within a function.  For example (from the [echoInput.S](assign02/echoInput.S)
+example program):
+
+```
+	cmpq $0, %rax                 /* see if read failed */
+	jl .LreadError                /* handle read failure */
+
+	...
+
+.LreadError:
+	/* error handling goes here */
+
+```
+
+**Hint about determining which characters are alphabetic**: character
+codes that are either between 65 and 90 inclusive, or
+97 to 122 inclusive, are alphabetic.
+
+## Example assembly language functions
+
+This section shows implementations of a couple of assembly language functions
+you might find useful.
+
+Here is an assembly language function called `strLen` which returns the number
+of characters in a NUL-terminated character string:
+
+```
+/*
+ * Determine the length of specified character string.
+ *
+ * Parameters:
+ *   s - pointer to a NUL-terminated character string
+ *
+ * Returns:
+ *    number of characters in the string
+ */
+	.globl strLen
+strLen:
+	subq $8, %rsp                 /* adjust stack pointer */
+	movq $0, %r10                 /* initial count is 0 */
+
+.LstrLenLoop:
+	cmpb $0, (%rdi)               /* found NUL terminator? */
+	jz .LstrLenDone               /* if so, done */
+	inc %r10                      /* increment count */
+	inc %rdi                      /* advance to next character */
+	jmp .LstrLenLoop              /* continue loop */
+
+.LstrLenDone:
+	movq %r10, %rax               /* return count */
+	addq $8, %rsp                 /* restore stack pointer */
+	ret
+```
+
+In C, the declaration of this function could look like this:
+
+```c
+long strLen(const char *s);
+```
+
+Unit testing this function might involve the following assertions:
+
+```c
+ASSERT(13L == strLen("Hello, world!"));
+ASSERT(0L == strLen(""));
+ASSERT(8L == strLen("00000010"));
+```
+
+# Submitting
+
+Before you submit, prepare a `README.txt` file so that it contains your
+names, and briefly summarizes each of your contributions to the submission
+(i.e., who worked on what functionality.) This may be very brief if you
+did not work with a partner.
+
+To submit your work:
+
+Run the following commands to create a `solution.zip` file:
+
+```
+rm -f solution.zip
+zip -9r solution.zip Makefile *.h *.c *.S README.txt
+```
+
+Please do *not* submit input files (especially if they are large!)
+
+Upload `solution.zip` to [Gradescope](https://www.gradescope.com/)
+as **Assignment 2 MS1** or **Assignment 2 MS2**, depending on which
+milestone you are submitting.
+
+Please check the files you uploaded to make sure they are the ones you
+intended to submit.
+
+## Autograder
+
+When you upload your submission to Gradescope, it will be tested by
+the autograder, which executes unit tests for each required function.
+Please note the following:
+
+* If your code does not compile successfully, all of the tests will fail
+* The autograder runs `valgrind` on your code, but it does *not* report
+  any information about the result of running `valgrind`: points will be
+  deducted if your code has memory errors or memory leaks!
