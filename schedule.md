@@ -39,11 +39,11 @@ Sep 15 | [Control flow](lectures/lecture08-public.pdf), [control.zip (example co
 Sep 18 | [Procedures, stacks](lectures/lecture09-public.pdf), [control2.zip (example code)](lectures/control2.zip) | *CSAPP* 3.7 | 
 Sep 20 | [Arrays and structs](lectures/lecture10-public.pdf), [arraystruct.zip (example code)](lectures/arraystruct.zip) | *CSAPP* 3.8–3.9 | 
 Sep 22 | Assembly language in class exercise |  | 
-Sep 25 | [Code and data interactions, buffer overflows](lectures/lecture11-public.pdf), [buf.zip (example code)](lectures/buf.zip) | *CSAPP* 3.10 | <span class='tentative'>A2 MS1 due</span>
+Sep 25 | [Code and data interactions, buffer overflows](lectures/lecture11-public.pdf), [buf.zip (example code)](lectures/buf.zip) | *CSAPP* 3.10 | [A2](assign/assign02.html) MS1 due
 Sep 27 | Program optimization (basic techniques): see Canvas for slides | *CSAPP* 5.1–5.8 | 
 Sep 29 | Exam 1 review session |  | 
 Oct 2 | **Exam 1** (in class) |  | 
-Oct 4 | [Pipelines](lectures/lecture13-public.pdf) | <i>P&amp;H</i> 4.5–4.7 | <span class='tentative'>A2 MS2 due Thurs 10/5</span>
+Oct 4 | [Pipelines](lectures/lecture13-public.pdf) | <i>P&amp;H</i> 4.5–4.7 | [A2](assign/assign02.html) MS2 due Thurs 10/5
 Oct 6 | Program optimization (ILP, memory, profiling): see Canvas for slides | *CSAPP* 5.9–5.14 | 
 Oct 9 | [Memory hierarchy](lectures/lecture15-public.pdf) | *CSAPP* 6.1–6.3 | 
 Oct 11 | [Cache policies](lectures/lecture16-public.pdf) | *CSAPP* 6.4 | <span class='tentative'>A3 MS1 due</span>
