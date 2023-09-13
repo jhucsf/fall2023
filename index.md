@@ -33,6 +33,8 @@ Gradescope.
 
 ## News
 
+* **Sep 13** — Review materials for Exam 1 are available on the [Resources](resources.html)
+  page.
 * **Sep 12** — [Assignment 2](assign/assign02.html) has two milestones, due
   **Monday, Sep 25th** and **Thursday, Oct 5th**, respectively.
 * **Aug 29** — [Assignment 1](assign/assign01.html) and its starter code have
