@@ -3,7 +3,7 @@ layout: default
 title: "Assignment 2: Word count"
 ---
 
-Milestone 1: Due Friday, Sep 25th by 11 pm
+Milestone 1: Due Monday, Sep 25th by 11 pm
 
 Milestone 2: Due Thursday, Oct 5th by 11 pm
 
