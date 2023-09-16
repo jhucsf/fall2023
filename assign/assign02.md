@@ -331,7 +331,19 @@ print *(unsigned char*) $rdi
 
 ### Milestone 2
 
-*Advice on Milestone 2 coming soon!*
+In `asm_wcfuncs.S` there are constants `WORDENTRY_WORD_OFFSET`,
+`WORDENTRY_COUNT_OFFSET`, and `WORDENTRY_NEXT_OFFSET` which define the
+offsets of the `word`, `count`, and `next` fields of the
+`struct WordEntry` data type. You will probably want to add a definition
+for the size of an instance of `struct WordEntry`:
+
+```c
+#define WORDENTRY_SIZE          (WORDENTRY_NEXT_OFFSET+8)
+```
+
+The `wc_find_or_insert` function will need to allocate an instance
+of `struct WordEntry` using `malloc` in order to insert a new node
+into the list.
 
 ## Memory correctness
 
