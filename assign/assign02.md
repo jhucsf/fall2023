@@ -345,6 +345,15 @@ The `wc_find_or_insert` function will need to allocate an instance
 of `struct WordEntry` using `malloc` in order to insert a new node
 into the list.
 
+Referring to the fields of a `struct WordEntry` object is fairly
+straightforward. For example, if `%r13` points to a `struct WordEntry`
+object, and you want to advance it to point to the next one in the
+linked list, you could use the instruction
+
+```
+movq WORDENTRY_NEXT_OFFSET(%r13), %r13
+```
+
 ## Memory correctness
 
 In all C and C++ code you write, we expect that there are no memory errors,
