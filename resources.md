@@ -12,6 +12,11 @@ This section has links to some information resources you might find useful.
 
 ## Practice problems and exams
 
+<!--
+Exam 1 review materials (not sure why this isn't updated
+on the course website)
+-->
+
 Review materials for Exam 1:
 
 * [Exam 1 practice questions](resources/exam1review.html), [Solutions](resources/exam1review-solutions.html)
