@@ -33,6 +33,9 @@ Gradescope.
 
 ## News
 
+* **Sep 21** — [Assignment 2](assign/assign02.html) has been updated to
+  explicitly allow calls to `malloc` and `free` in the `main` function
+  for the purpose of allocating and deallocating the hash table array.
 * **Sep 21** — [Assignment 2](assign/assign02.html) has been updated to correct
   a mistake in the pseudo-code for the main input loop of the `main`
   function.

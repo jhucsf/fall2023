@@ -11,6 +11,10 @@ Milestone 2: Due Thursday, Oct 5th by 11 pm
 (It should be calling `wc_dict_find_or_insert`, not
 `wc_find_or_insert`.)
 
+*Update 9/21*: Updated the restrictions on library function calls to
+explicitly allow calls to `malloc` and `free` in `main`, for the purposes
+of allocating and deallocating the hash table array.
+
 # Overview
 
 In this assignment, you will implement a *word count* program in both
@@ -107,8 +111,14 @@ library functions other than the following ones:
 * `fclose`
 * `printf`
 * `fprintf`
+* `malloc`
+* `free`
 
-Do not add any additional `#include` directives in any source file.
+Note that `c_wcmain.c` does not have an `#include <stdlib.h>` directive,
+so you should add one if you need to call `malloc` and `free`.
+
+Aside from adding `#include <stdlib.h>` to `c_wcmain.c`,
+you should not add any additional `#include` directives in any source file.
 
 ## Expectations for assembly language code
 
