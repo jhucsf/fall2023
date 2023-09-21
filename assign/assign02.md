@@ -7,6 +7,10 @@ Milestone 1: Due Friday, Sep 25th by 11 pm
 
 Milestone 2: Due Thursday, Oct 5th by 11 pm
 
+*Update 9/21*: Corrected pseudo-code for main input loop of `main` function.
+(It should be calling `wc_dict_find_or_insert`, not
+`wc_find_or_insert`.)
+
 # Overview
 
 In this assignment, you will implement a *word count* program in both
@@ -240,7 +244,7 @@ while ( next word is read successfully using wc_readnext ) {
 
   use wc_trim_non_alpha to remove non-alphabetic characters at end of word
 
-  use wc_find_or_insert to find or insert the word in the hash table
+  use wc_dict_find_or_insert to find or insert the word in the hash table
 
   increment the WordEntry's count
 }

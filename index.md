@@ -33,6 +33,9 @@ Gradescope.
 
 ## News
 
+* **Sep 21** — [Assignment 2](assign/assign02.html) has been updated to correct
+  a mistake in the pseudo-code for the main input loop of the `main`
+  function.
 * **Aug 29** — [Assignment 1](assign/assign01.html) and its starter code have
   been updated to fix a mistake in two function header comments.
 * **Aug 28** — Welcome! [Assignment 1](assign/assign01.html) has two milestones,
