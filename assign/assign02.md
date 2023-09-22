@@ -7,6 +7,14 @@ Milestone 1: Due Monday, Sep 25th by 11 pm
 
 Milestone 2: Due Thursday, Oct 5th by 11 pm
 
+*Update 9/21*: Corrected pseudo-code for main input loop of `main` function.
+(It should be calling `wc_dict_find_or_insert`, not
+`wc_find_or_insert`.)
+
+*Update 9/21*: Updated the restrictions on library function calls to
+explicitly allow calls to `malloc` and `free` in `main`, for the purposes
+of allocating and deallocating the hash table array.
+
 # Overview
 
 In this assignment, you will implement a *word count* program in both
@@ -103,8 +111,14 @@ library functions other than the following ones:
 * `fclose`
 * `printf`
 * `fprintf`
+* `malloc`
+* `free`
 
-Do not add any additional `#include` directives in any source file.
+Note that `c_wcmain.c` does not have an `#include <stdlib.h>` directive,
+so you should add one if you need to call `malloc` and `free`.
+
+Aside from adding `#include <stdlib.h>` to `c_wcmain.c`,
+you should not add any additional `#include` directives in any source file.
 
 ## Expectations for assembly language code
 
@@ -240,7 +254,7 @@ while ( next word is read successfully using wc_readnext ) {
 
   use wc_trim_non_alpha to remove non-alphabetic characters at end of word
 
-  use wc_find_or_insert to find or insert the word in the hash table
+  use wc_dict_find_or_insert to find or insert the word in the hash table
 
   increment the WordEntry's count
 }
@@ -331,7 +345,28 @@ print *(unsigned char*) $rdi
 
 ### Milestone 2
 
-*Advice on Milestone 2 coming soon!*
+In `asm_wcfuncs.S` there are constants `WORDENTRY_WORD_OFFSET`,
+`WORDENTRY_COUNT_OFFSET`, and `WORDENTRY_NEXT_OFFSET` which define the
+offsets of the `word`, `count`, and `next` fields of the
+`struct WordEntry` data type. You will probably want to add a definition
+for the size of an instance of `struct WordEntry`:
+
+```c
+#define WORDENTRY_SIZE          (WORDENTRY_NEXT_OFFSET+8)
+```
+
+The `wc_find_or_insert` function will need to allocate an instance
+of `struct WordEntry` using `malloc` in order to insert a new node
+into the list.
+
+Referring to the fields of a `struct WordEntry` object is fairly
+straightforward. For example, if `%r13` points to a `struct WordEntry`
+object, and you want to advance it to point to the next one in the
+linked list, you could use the instruction
+
+```
+movq WORDENTRY_NEXT_OFFSET(%r13), %r13
+```
 
 ## Memory correctness
 
