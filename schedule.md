@@ -70,4 +70,4 @@ Dec 1 | [Concurrency with processes](lectures/lecture32-public.pdf), [mp_webserv
 Dec 4 | [Concurrency with I/O multiplexing](lectures/lecture33-public.pdf), [iomux.zip (example code)](lectures/iomux.zip) | *CSAPP* 12.2 | 
 Dec 6 | *TBD* |  | 
 Dec 8 | Exam 3 review session |  | <span class='tentative'>A5 MS2 due</span>
-*TBD* | **Exam 3** (during scheduled final exam time slot) |  | 
+Dec 20 | **Exam 3** at 2pm (location TBD) |  | 
