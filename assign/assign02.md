@@ -15,6 +15,8 @@ Milestone 2: Due Thursday, Oct 5th by 11 pm
 explicitly allow calls to `malloc` and `free` in `main`, for the purposes
 of allocating and deallocating the hash table array.
 
+*Update 9/22*: Added advice for implementing Milestone 2.
+
 # Overview
 
 In this assignment, you will implement a *word count* program in both
@@ -367,6 +369,24 @@ linked list, you could use the instruction
 ```
 movq WORDENTRY_NEXT_OFFSET(%r13), %r13
 ```
+
+You should work on the assembly language implementation of the `main`
+function only after fully implementing and testing the individual assembly
+language function implementations. Also note that for the assembly language
+`main` function, the most challenging functionality will be finding the
+most-frequently occurring word. We recommend
+
+1. First, get the total word count to work
+2. Second, get the number of unique (distinct) words to work
+3. Last, implement finding the most-frequently occurring word
+
+We will test these outputs separately, so you can receive partial credit
+for implementing 1 or 2 of them.
+
+Note that it is likely that you will not have enough registers for all of the
+variables in the `main` function, so you should be prepared to allocate one
+of more variables on the stack. Also, you will probably want to reserve
+64 bytes on the stack to use as the word buffer passed to `wc_readnext`.
 
 ## Memory correctness
 
