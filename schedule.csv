@@ -10,7 +10,7 @@ Sep 13,"ALU operations, arithmetic",lectures/lecture07-public.pdf,alu.zip,*CSAPP
 Sep 15,"Control flow",lectures/lecture08-public.pdf,control.zip,*CSAPP* 3.6,
 Sep 18,"Procedures, stacks",lectures/lecture09-public.pdf,control2.zip,*CSAPP* 3.7,
 Sep 20,"Arrays and structs",lectures/lecture10-public.pdf,arraystruct.zip,*CSAPP* 3.8–3.9,
-Sep 22,"Assembly language in class exercise",,,
+Sep 22,"Assembly language in class exercise",lectures/assembly-exercise-public.pdf,,
 Sep 25,"Code and data interactions, buffer overflows",lectures/lecture11-public.pdf,buf.zip,*CSAPP* 3.10,"[A2](assign/assign02.html) MS1 due"
 Sep 27,"Program optimization (basic techniques): see Canvas for slides",,,*CSAPP* 5.1–5.8,
 Sep 29,"Exam 1 review session",
