@@ -54,6 +54,9 @@ Review materials for Exam 3:
 * [Brown gdb cheat sheet](https://cs.brown.edu/courses/cs033/docs/guides/gdb.pdf)
 * [CMU summary of gdb commands for x86-64](http://csapp.cs.cmu.edu/3e/docs/gdbnotes-x86-64.pdf)
 
+## Style Guidelines
+* The [style guidelines](resources/style.html) state our coding style expectations.
+
 # Software
 
 This section covers the software you'll be using in working on programming assignments.
