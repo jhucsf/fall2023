@@ -82,39 +82,8 @@ int main(void)
 
 ## Comments
 
-Each source file (header and implementation) should have a header comment
-describing the purpose of the file, the assignment name, your name,
-and your email.  Example:
-
-```c
-/*
- * String functions for multithreaded client/server calculator program
- * CSF Assignment 7
- * A. Student
- * astude99@jhu.edu
- */
-```
-
-Each function should have a comment describing the purpose and operation
-of the function, its parameters, and its return value (if any).  Example:
-
-```c
-/*
- * Skip leading whitespace in a C character string, returning
- * a string (using the same storage as the original string)
- * with leading whitespace removed.  If there is no leading
- * whitespace, returns the original string.
- *
- * Parameters:
- *   s - pointer to a C character string
- *
- * Returns:
- *   a pointer to the first non-whitespace character in s
- */
-const char *skip_whitespace(const char *s) {
-    ...
-}
-```
+Each function, if not clear, should have a comment describing the purpose
+and operation of the function, parameters, and return value.
 
 Use appropriate comments to document the *intent* behind your code,
 especially the more complex parts of your code.  Note that comments are
