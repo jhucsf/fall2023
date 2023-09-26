@@ -17,6 +17,11 @@ of allocating and deallocating the hash table array.
 
 *Update 9/22*: Added advice for implementing Milestone 2.
 
+*Updated 9/26*: Updated [Memory correctness](#memory-correctness)
+section to indicate that only the `test_free_chain` unit test
+needs to be free of memory leaks (since there are some test functions
+with unavoidable memory leaks, such as `test_find_or_insert`.)
+
 # Overview
 
 In this assignment, you will implement a *word count* program in both
@@ -404,8 +409,8 @@ Examples of program executions which should proceed without any
 memory errors include
 
 ```bash
-valgrind --leak-check=full ./c_wctests
-valgrind --leak-check=full ./asm_wctests
+valgrind --leak-check=full ./c_wctests test_free_chain
+valgrind --leak-check=full ./asm_wctests test_free_chain
 valgrind --leak-check=full ./c_wordcount little_dorrit.txt
 valgrind --leak-check=full ./asm_wordcount little_dorrit.txt
 valgrind --leak-check=full ./casm_wordcount little_dorrit.txt
