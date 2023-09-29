@@ -30,7 +30,7 @@ assignment, you may finish and turn in the assignment assignment individually.
 You may *not* use your partner's lack of contribution as an excuse for not
 completing the assignment.
 
-Please read the [style guidelines](assign/style.html) so that you know what our coding style expectations are.
+Please read the [style guidelines](resources/style.html) so that you know what our coding style expectations are.
 
 **Important**: All assignments must compile and run on x86-64 Linux.
 Please see the [Resources](resources.html) page for information on setting
