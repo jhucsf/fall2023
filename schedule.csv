@@ -18,15 +18,15 @@ Oct 2,"**Exam 1** (in class)",
 Oct 4,"Pipelines",lectures/lecture13-public.pdf,,"<i>P&amp;H</i> 4.5–4.7","[A2](assign/assign02.html) MS2 due Thurs 10/5"
 Oct 6,"Program optimization (ILP, memory, profiling): see Canvas for slides",,,*CSAPP* 5.9–5.14,
 Oct 9,"Memory hierarchy",lectures/lecture15-public.pdf,,*CSAPP* 6.1–6.3,
-Oct 11,"Cache policies",lectures/lecture16-public.pdf,,*CSAPP* 6.4,"<span class='tentative'>A3 MS1 due</span>"
+Oct 11,"Cache policies",lectures/lecture16-public.pdf,,*CSAPP* 6.4,"[A3](assign/assign03.html) MS1 due"
 Oct 13,"Caches and program execution: see Canvas for slides",,,*CSAPP* 6.5,
 Oct 16,"Linking basics, symbols, relocations, executables, loading",lectures/lecture18-public.pdf,,*CSAPP* 7.1–7.9,
 Oct 18,"Dynamic linking, shared libraries, PIC, interpositioning",lectures/lecture19-public.pdf,dynload.zip,*CSAPP* 7.10–7.15,
 Oct 20,"*Fall break, no class*"
-Oct 23,"Exceptions, Processes",lectures/lecture20-public.pdf,,"*CSAPP* 8.1–8.4, 8.7","<span class='tentative'>A3 MS2 due</span>"
+Oct 23,"Exceptions, Processes",lectures/lecture20-public.pdf,,"*CSAPP* 8.1–8.4, 8.7","[A3](assign/assign03.html) MS2 due"
 Oct 25,"Signals",lectures/lecture21-public.pdf,signals.zip,*CSAPP* 8.5–8.6,
 Oct 27,"Virtual memory",lectures/lecture22-public.pdf,,*CSAPP* 9.1–9.3,
-Oct 30,"Memory management, address translation",lectures/lecture23-public.pdf,,*CSAPP* 9.4–9.7,"<span class='tentative'>A3 MS3 due</span>"
+Oct 30,"Memory management, address translation",lectures/lecture23-public.pdf,,*CSAPP* 9.4–9.7,"[A3](assign/assign03.html) MS3 due"
 Nov 1,"Memory mapping, dynamic memory allocation",lectures/lecture24-public.pdf,,"*CSAPP* 9.8, 9.9, 9.11",
 Nov 3,"Exam 2 review session",
 Nov 6,"**Exam 2** (in class)",

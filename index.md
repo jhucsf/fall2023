@@ -33,6 +33,9 @@ Gradescope.
 
 ## News
 
+* **Oct 5** — [Assignment 3](assign/assign03.html) has three milestones,
+  due **Wednesday, Oct 11th**, **Monday, Oct 23rd**, and **Monday, Oct 30th**,
+  respectively.
 * **Sep 21** — [Assignment 2](assign/assign02.html) has been updated to
   explicitly allow calls to `malloc` and `free` in the `main` function
   for the purpose of allocating and deallocating the hash table array.
