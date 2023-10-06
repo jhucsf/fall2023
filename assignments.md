@@ -40,3 +40,4 @@ Assignment | Type | Due
 ---------- | :--: | ---
 [Assignment 1: Big integers](assign/assign01.html) | Pair | MS1 due Wednesday, Sep 6th<br>MS2 due Wednesday, Sep 13th
 [Assignment 2: Word count](assign/assign02.html) | Pair | MS1 due Monday, Sep 25th<br>MS2 due Thursday, Oct 5th
+[Assignment 3: Cache simulator](assign/assign03.html) | Pair | MS1 due Wednesday, Oct 11th<br>MS2 due Monday, Oct 23rd<br>MS3 due Monday, Oct 30th
