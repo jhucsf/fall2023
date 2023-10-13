@@ -3,6 +3,7 @@ layout: default
 title: "Vim Setup"
 ---
 A very easy setup for [Neovim](https://neovim.io/).
+Note: This setup will come with LSPs for c, cpp, and lua. For more, you will need to configure on your own.
 
 ## Why?
 1. Speed: You will edit text fast.
