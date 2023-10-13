@@ -18,7 +18,7 @@ Follow instruction [here](https://github.com/neovim/neovim/wiki/Installing-Neovi
 
 ## Setting up [NvChad](https://nvchad.com/)
 1. Your terminal is required to use a [Nerd Font](https://www.nerdfonts.com/). If you can't make up your mind, use `JetbrainsMono Nerd Font`
-2. `git clone https://github.com/ishme-al/csf-vim ~/.config/nvim --depth 1 && nvim`
+2. run `git clone https://github.com/ishme-al/csf-vim ~/.config/nvim --depth 1 && nvim`
 
 ## Post-Install (optional)
 1. Install [ripgrep](https://github.com/BurntSushi/ripgrep) for additional functionality
@@ -33,6 +33,7 @@ Follow instruction [here](https://github.com/neovim/neovim/wiki/Installing-Neovi
 	```vim
 	vim.opt.expandtab=false
 	```
+
 
 4. If you prefer 2 spaces for a tab, delete the file.
 
