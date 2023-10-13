@@ -128,7 +128,9 @@ You'll also want to install a text editor.  [Emacs](https://www.gnu.org/software
 sudo apt-get install emacs vim
 ```
 
-## Using Git
+## Vim setup
+[Tutorial](resources/vim) on using Vim
 
-* [Github ssh authentication](resources/github-ssh.html): How to use ssh to access
+## Using Git
+[Github ssh authentication](resources/github-ssh.html): How to use ssh to access
   your private repositories on Github
