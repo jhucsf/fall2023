@@ -33,6 +33,9 @@ Gradescope.
 
 ## News
 
+* **Oct 16** — The due dates for Milestones 2 and 3 of [Assignment 3](assign/assign03.html)
+  have been moved to **Wednesday, Oct 25th** and **Wednesday, Nov 1st**,
+  respectively.
 * **Oct 5** — [Assignment 3](assign/assign03.html) has three milestones,
   due **Wednesday, Oct 11th**, **Monday, Oct 23rd**, and **Monday, Oct 30th**,
   respectively.

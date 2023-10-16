@@ -51,11 +51,11 @@ Oct 13 | Caches and program execution: see Canvas for slides | *CSAPP* 6.5 |
 Oct 16 | [Linking basics, symbols, relocations, executables, loading](lectures/lecture18-public.pdf) | *CSAPP* 7.1–7.9 | 
 Oct 18 | [Dynamic linking, shared libraries, PIC, interpositioning](lectures/lecture19-public.pdf), [dynload.zip (example code)](lectures/dynload.zip) | *CSAPP* 7.10–7.15 | 
 Oct 20 | *Fall break, no class* |  | 
-Oct 23 | [Exceptions, Processes](lectures/lecture20-public.pdf) | *CSAPP* 8.1–8.4, 8.7 | [A3](assign/assign03.html) MS2 due
-Oct 25 | [Signals](lectures/lecture21-public.pdf), [signals.zip (example code)](lectures/signals.zip) | *CSAPP* 8.5–8.6 | 
+Oct 23 | [Exceptions, Processes](lectures/lecture20-public.pdf) | *CSAPP* 8.1–8.4, 8.7 | 
+Oct 25 | [Signals](lectures/lecture21-public.pdf), [signals.zip (example code)](lectures/signals.zip) | *CSAPP* 8.5–8.6 | [A3](assign/assign03.html) MS2 due
 Oct 27 | [Virtual memory](lectures/lecture22-public.pdf) | *CSAPP* 9.1–9.3 | 
-Oct 30 | [Memory management, address translation](lectures/lecture23-public.pdf) | *CSAPP* 9.4–9.7 | [A3](assign/assign03.html) MS3 due
-Nov 1 | [Memory mapping, dynamic memory allocation](lectures/lecture24-public.pdf) | *CSAPP* 9.8, 9.9, 9.11 | 
+Oct 30 | [Memory management, address translation](lectures/lecture23-public.pdf) | *CSAPP* 9.4–9.7 | 
+Nov 1 | [Memory mapping, dynamic memory allocation](lectures/lecture24-public.pdf) | *CSAPP* 9.8, 9.9, 9.11 | [A3](assign/assign03.html) MS3 due
 Nov 3 | Exam 2 review session |  | 
 Nov 6 | **Exam 2** (in class) |  | 
 Nov 8 | [Unix I/O, files](lectures/lecture25-public.pdf) | *CSAPP* 10.1–10.11 | 

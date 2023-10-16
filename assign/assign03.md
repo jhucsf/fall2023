@@ -6,8 +6,8 @@ title: "Assignment 3: Cache simulator"
 **Due**:
 
 * Milestone 1: Wednesday, October 11th (no late hours)
-* Milestone 2: Monday, October 23rd by 11pm (max 48 late hours)
-* Milestone 3: Monday, October 30th by 11pm
+* Milestone 2: Wednesday, October 25th by 11pm (max 48 late hours)
+* Milestone 3: Wednesday, November 1st by 11pm
 
 Assignment type: **Pair**, you may work with one partner
 
