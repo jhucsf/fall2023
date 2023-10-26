@@ -23,7 +23,6 @@ Review materials for Exam 1:
 * [Midterm, Spring 2020](resources/midterm-spring2020.pdf) (Questions 1–3), [Solution](resources/midterm-spring2020-soln.pdf)
 * [Exam 1, Fall 2021](resources/exam01-fall2021.pdf), [Solution](resources/exam01-fall2021-soln.pdf)
 
-<!--
 Review materials for Exam 2:
 
 * [Exam 2 practice questions](resources/exam2review.html), [Solutions](resources/exam2review-solutions.html)
@@ -31,6 +30,7 @@ Review materials for Exam 2:
 * [Final exam, Spring 2020](resources/final-spring2020.pdf) (Questions 1–3), [Solution](resources/final-spring2020-soln.pdf)
 * [Exam 2, Fall 2021](resources/exam02-fall2021.pdf), [Solution](resources/exam02-fall2021-soln.pdf)
 
+<!--
 Review materials for Exam 3:
 
 * [Exam 3 practice questions](resources/exam3review.html), [Solutions](resources/exam3review-solutions.html)
