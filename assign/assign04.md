@@ -27,7 +27,7 @@ sequential sort.
 
 Your assignment grade will be determined as follows:
 
-* Sequential sorting using `qsort`: 20%
+* Handling command line arguments, using `open` and `mmap` to map the file: 20%
 * Parallel sorting using subprocesses: 50%
 * Experiments and report: 15%
 * Error reporting: 5%
