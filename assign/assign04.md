@@ -95,7 +95,7 @@ child processes, and having each one recursively sort half of
 the array. (This will work because the data to be sorted will
 be accessed as a memory-mapped file that can be shared by all
 of the processes.) Note that the `merge_sort` function provided in
-the starter code is already a correct implement of the sequential
+the starter code is already a correct implementation of the sequential
 merge sort algorithm. You will just need to modify it to use
 child processes to do the recursive sorting in parallel.
 
@@ -367,12 +367,6 @@ test against until you are able to distinguish results between different thresho
 on the same data size.
 
 ### Hints and tips
-
-Before coding the parallel fork/join implementation, you should implement and
-fully test a *sequential* implementation of merge sort.  It's a waste of time
-to try to debug the parallel version of the algorithm if there are bugs in the
-sequential implementation of the algorithm, such as function that merges
-sorted arrays. (Ask us how we know 😄...)
 
 Ensure that only the topmost process (i.e. the first process executed) ever attempts to
 open the file, map memory, and carry out cleanup. Attempting `munmap()` the file multiple
