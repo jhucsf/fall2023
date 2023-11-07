@@ -319,7 +319,7 @@ included in the starter code:
 
 ```
 # generate the file with 1000 integers
-./gen_rand_data 8000 test.in
+./gen_rand_data 8000 data.in
 # sort the file
 ./parsort data.in 500
 # verify that the file is sorted correctly
