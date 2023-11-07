@@ -201,7 +201,7 @@ afterwards:
 if (pid == 0) {
     merge_sort(/* arguments to merge sort function */);
     // if merge_sort returns, assume it was successful
-    exit(retcode);
+    exit(0); // child was successful!
     // everything past here is now unreachable in the child
 }
 ```
