@@ -199,7 +199,8 @@ afterwards:
 
 ```c
 if (pid == 0) {
-    int retcode = do_child_work();
+    merge_sort(/* arguments to merge sort function */);
+    // if merge_sort returns, assume it was successful
     exit(retcode);
     // everything past here is now unreachable in the child
 }
