@@ -1,0 +1,10 @@
+/join partytime
+/join partytime
+This is a message from alice
+And this is a message from bob
+each alternating line of messages...
+will be send by a different client...
+this test ensures that clients are served in order
+and that one client may not monopolize the entire transmission
+/quit
+/quit

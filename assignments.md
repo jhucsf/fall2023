@@ -42,3 +42,4 @@ Assignment | Type | Due
 [Assignment 2: Word count](assign/assign02.html) | Pair | MS1 due Monday, Sep 25th<br>MS2 due Thursday, Oct 5th
 [Assignment 3: Cache simulator](assign/assign03.html) | Pair | MS1 due Wednesday, Oct 11th<br>MS2 due Wednesday, Oct 25th<br>MS3 due Wednesday, Nov 1st
 [Assignemnt 4: Parallel merge sort](assign/assign04.html) | Pair | Friday, Nov 10th
+[Assignment 5: Chat server](assign/assign05.html) | Pair | MS1 due Wednesday, Nov 29th<br>MS2 due Friday, Dec 8th

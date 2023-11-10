@@ -33,6 +33,10 @@ Gradescope.
 
 ## News
 
+* **Nov 10** — [Assignment 5](assign/assign05.html) has two milestones, due
+  **Wednesday, Nov 29th** and **Friday, Dec 8th** respectively.
+  Note that this is a "double" assignment, and each milestone is
+  considered to be a full assignment for grading purposes.
 * **Oct 31** — [Assignment 4](assign/assign04.html) is due on
   **Friday, Nov 10th**.
 * **Oct 26** — Exam 2 will take place in class on **Monday, Nov 6th**.
