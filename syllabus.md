@@ -39,6 +39,7 @@ CAs:
 * Owen Reed <oreed2@jhu.edu>
 * Yash Permalla <ypermal1@jhu.edu>
 * Mac Millan <nmacmil1@jhu.edu>
+* Alisa Yang <yyang221@jhu.edu>
 
 ## Meeting
 
