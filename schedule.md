@@ -61,7 +61,7 @@ Nov 6 | **Exam 2** (in class) |  |
 Nov 8 | [Unix I/O, files](lectures/lecture25-public.pdf) | *CSAPP* 10.1–10.11 | 
 Nov 10 | [Networks, Internet Protocol](lectures/lecture26-public.pdf) | *CSAPP* 11.1–11.3 | [A4](assign/assign04.html) due
 Nov 13 | [Sockets, Application Protocols](lectures/lecture27-public.pdf), [sockets.zip (example code)](lectures/sockets.zip) | *CSAPP* 11.4 | 
-Nov 15 | [Network applications, HTTP](lectures/lecture28-public.pdf), [webserver.zip (example code)](lectures/webserver.zip) | *CSAPP* 11.4–11.6 | 
+Nov 15 | [Network applications, HTTP](lectures/lecture28-public.pdf), [webclient.zip (example code)](lectures/webclient.zip), [webserver.zip (example code)](lectures/webserver.zip) | *CSAPP* 11.4–11.6 | 
 Nov 17 | [Concurrency with pthreads](lectures/lecture29-public.pdf), [mt_webserver.zip (example code)](lectures/mt_webserver.zip) | *CSAPP* 12.3 | 
 Nov 20–24 | *Fall recess, no class* |  | 
 Nov 27 | [Thread synchronization](lectures/lecture30-public.pdf), [synch.zip (example code)](lectures/synch.zip) | *CSAPP* 12.4–12.5 | 

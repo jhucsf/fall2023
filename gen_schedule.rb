@@ -61,7 +61,13 @@ CSV.foreach('schedule.csv') do |row|
     end
 
     if example_code != ''
-      print ", [#{example_code} (example code)](lectures/#{example_code})"
+      # Special case: if the first character is "[", assume it's
+      # custom Markdown code that should be included verbatim
+      if example_code.start_with?('[')
+        print ", #{example_code}"
+      else
+        print ", [#{example_code} (example code)](lectures/#{example_code})"
+      end
     end
 
     print " | #{reading}"
