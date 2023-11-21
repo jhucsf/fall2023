@@ -376,10 +376,10 @@ nc localhost [portnumber]
 You can also spawn a netcat "server" using the following commands:
 
 ```
-nc -l -p <port>
+nc -l <port>
 ```
 
-where port is a number greater than 1024. You would then type in the server
+where port is a number greater or equal to 1024. You would then type in the server
 responses yourself in the netcat terminal window after you get a client connected
 to the "server" following the sequence diagrams above.
 
