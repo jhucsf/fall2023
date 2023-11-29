@@ -33,6 +33,9 @@ Gradescope.
 
 ## News
 
+* **Nov 29** — Exam 3 will take place at 2pm on **Wednesday, Dec 20th**
+  in Remsen 1. Review materials are available on the [Resources](resources.html)
+  page. We will have a review session in class on Friday, Dec 8th.
 * **Nov 29** — The due date for Milestone 1 of [Assignment 5](assign/assign05.html)
   has been extended by 1 day to 11 pm on **Thursday, Nov 30th**,
   due to an incompatibility of the client automated testing scripts
