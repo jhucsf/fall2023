@@ -3,18 +3,23 @@ layout: default
 title: "Assignment 5: Chat Server"
 ---
 
-
 *Note*: Assignment 5 is a double assignment. Each milestone (MS1 and MS2)
 is worth 1/6 of the assignments grade for the course, the same as
 (individually) Assignments 1–4.
 
 **Due:**
 
-* Milestone 1 due **Wed Nov 29th** by 11pm
+* Milestone 1 due <strike><b>Wed Nov 29th</b></strike> **Thurs Nov 30th** by 11pm
 * Milestone 2 due **Fri Dec 8th** by 11pm
 
 You may use your late hours as usual on each milestone. Please let us know
 if you are planning to use more than 48 late hours on a milestone.
+
+*Update 11/29*: Extended MS1 due date by 1 day because the
+[automated testing scripts](#automated-testing) for the
+client programs had an incompatibility with the version of `nc` (netcat)
+currently installed on the ugrad systems. You can download them
+again to get the fixed versions.
 
 ## Grading Criteria
 
@@ -35,8 +40,7 @@ Milestone 2:
 - [Overview](#overview)
 - [Goals of the assignment](#goals-of-the-assignment)
 - [Demo](#demo)
-- [The protocol](#the-protocol) - **Important:** You _must_ read this before starting the
-    assignment!
+- [The protocol](#the-protocol) - **Important:** You _must_ read this before starting the assignment!
 - [Assignment skeleton](#assignment-skeleton)
 - [Milestone 1: The clients](#milestone-1-the-clients)
   - [Receiver](#receiver)
@@ -44,8 +48,7 @@ Milestone 2:
   - [Error handling](#error-handling)
   - [Implementation tips](#implementation-tips)
   - [Testing](#testing) - *This is an important section!*
-  - [Automated testing](#automated-testing) - _Do not attempt automated testing until you
-      have thoroughly manually tested your programs._
+  - [Automated testing](#automated-testing) - _Do not attempt automated testing until you have thoroughly manually tested your programs._
 - [Milestone 2: The server](#milestone-2-the-server)
   - [Tasks](#tasks)
   - [Using threads for client connections](#using-threads-for-client-connections)
@@ -58,8 +61,7 @@ Milestone 2:
   - [Implementation tips](#implementation-tips)
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
-    - [Automated testing](#automated-testing-1) - _Do not attempt automated testing until
-        you have thoroughly manually tested your program._
+    - [Automated testing](#automated-testing-1) - _Do not attempt automated testing until you have thoroughly manually tested your program._
 - [Reference](#reference)
 - [Submitting](#submitting)
 
@@ -425,8 +427,8 @@ manual testing workflows:
 
 You can obtain the automated test scripts here:
 
-* [test_receiver.sh](assign05/test_receiver.sh)
-* [test_sender.sh](assign05/test_sender.sh)
+* [test\_receiver.sh](assign05/test_receiver.sh)
+* [test\_sender.sh](assign05/test_sender.sh)
 
 Download them on in the terminal using `wget [link]` while you
 are in the same directory your project is in. Don't forget to make them
@@ -464,9 +466,9 @@ The arguments are:
 While we highly encourage you to come up with your own test inputs, we have
 provided the following test inputs for reference:
 
-* [test_receiver_server.in](assign05/test_receiver_server.in)
-* [test_sender_server.in](assign05/test_sender_server.in)
-* [test_sender_client.in](assign05/test_sender_client.in)
+* [test\_receiver\_server.in](assign05/test_receiver_server.in)
+* [test\_sender\_server.in](assign05/test_sender_server.in)
+* [test\_sender\_client.in](assign05/test_sender_client.in)
 
 You can run the example receiver test using:
 
@@ -481,7 +483,6 @@ and you should verify that `receiver_test-client.err` is empty, that
 bob: hi alice
 robert_de_bobert: I have the cookies.
 bob: cookies?
-
 ```
 
 and that `receiver_test-received` contains exactly:
@@ -489,7 +490,6 @@ and that `receiver_test-received` contains exactly:
 ```
 rlogin:alice
 join:partytime
-
 ```
 
 You can run the example sender test using:
@@ -508,7 +508,6 @@ sendall:Hello World!
 join:cafe
 sendall:get me 1 coffee
 quit:bye
-
 ```
 
 With the exception of the payload to `quit` (it can be any text).

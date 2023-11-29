@@ -33,6 +33,12 @@ Gradescope.
 
 ## News
 
+* **Nov 29** — The due date for Milestone 1 of [Assignment 5](assign/assign05.html)
+  has been extended by 1 day to 11 pm on **Thursday, Nov 30th**,
+  due to an incompatibility of the client automated testing scripts
+  with the version of `nc` (netcat) currently installed on the ugrad
+  systems. You can re-download these scripts to get the fixed
+  versions.
 * **Nov 10** — [Assignment 5](assign/assign05.html) has two milestones, due
   **Wednesday, Nov 29th** and **Friday, Dec 8th** respectively.
   Note that this is a "double" assignment, and each milestone is
