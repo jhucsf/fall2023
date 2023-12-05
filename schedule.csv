@@ -40,6 +40,6 @@ Nov 27,"Thread synchronization",lectures/lecture30-public.pdf,synch.zip,*CSAPP* 
 Nov 29,"Parallelism, concurrency issues",lectures/lecture31-public.pdf,synch2.zip,*CSAPP* 12.6–12.7,"[A5](assign/assign05.html) MS1 due"
 Dec 1,"Concurrency with processes",lectures/lecture32-public.pdf,mp_webserver.zip,*CSAPP* 12.1,
 Dec 4,"Concurrency with I/O multiplexing",lectures/lecture33-public.pdf,iomux.zip,*CSAPP* 12.2,
-Dec 6,*TBD*
+Dec 6,"Bonus topics",lectures/lecture34-public.pdf,,,
 Dec 8,"Exam 3 review session",,,,"[A5](assign/assign05.html) MS2 due"
 Dec 20,"**Exam 3** (2pm, in Remsen 1)"
