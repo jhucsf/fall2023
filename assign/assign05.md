@@ -21,6 +21,9 @@ client programs had an incompatibility with the version of `nc` (netcat)
 currently installed on the ugrad systems. You can download them
 again to get the fixed versions.
 
+*Update 12/8*: Corrected language suggesting that a server
+receiver thread needs to handle "quit" messages.
+
 ## Grading Criteria
 
 Milestone 1:
@@ -580,7 +583,7 @@ some kind of response (`err` for error, `ok` for success) to receive full
 credit. Failure to transmit a response to a synchronous message will cause the client to hang.
 
 In the receiver loop, you must terminate the loop and tear down the client thread if any
-message transmission fails, or if a valid `quit` message is received. For the sender loop,
+message transmission fails. For the sender loop,
 you must terminate the loop and tear down the client thread if any message fails to send,
 as there is no other way to detect a client disconnect. Be sure that you clean up any
 datastructures and entries specific to the client before terminating the thread to prevent
